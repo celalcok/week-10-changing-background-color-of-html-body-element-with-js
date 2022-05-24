@@ -7,7 +7,6 @@ const radio2 = document.querySelector('#radio2');
 const inOrder = document.querySelector('#in_order');
 const inOrderCheck = document.querySelector('#in_order_check');
 const lblInOrder = document.querySelector('#lbl_in_order');
-let func;
 let state=true;
 let number=0;
 func = changeBackgroundWithRGBColor();
@@ -32,9 +31,9 @@ document.body.addEventListener('change', function (e) {
 
 button.addEventListener('click', function (e) {
     if (state === true){
-        func = changeBackgroundWithRGBColor();
+        changeBackgroundWithRGBColor();
     }else{
-        func = changeBackgroundWithTextColor();
+        changeBackgroundWithTextColor();
     }
 });
 
