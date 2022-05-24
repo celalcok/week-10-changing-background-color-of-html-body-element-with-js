@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing the Background with Javascript</title>
+
+    <style>
+        body { 
+            margin:0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            gap: 30px;
+         }
+         .main{
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             border: 1px solid #000;
+             width: 800px;
+             height: auto;
+             border-radius: 5px;
+             padding: 30px;
+             gap:30px;
+             background-color: white;
+         }
+         .radios{
+             display: flex;
+             width: 100%;
+             align-items: center;
+             justify-content: center;
+         }
+         .radio-group{
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             height: 30px;
+             width: 100%;
+             gap: 20px;
+         }
+         .show{
+             display: block;
+         }
+         .hidden{
+             display: none;
+         }
+         button{
+             background-color: black;
+             color: #fff;
+             border:none;
+             border-radius: 5px;
+             padding: 20px;
+             cursor: pointer;
+             transition:0.5s;
+            }
+        
+        button:hover{
+            background-color:#666;
+        }
+        #result{
+            padding: 20px;
+            color: #000;
+            border-radius: 5px; 
+            border: 1px solid #000;
+            width: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="radios">
+            <div class="radio-group">
+                <input class="radio" type="radio" name="radio" id="radio1">
+                <label for="radio1">Function-RGB</label>
+            </div>
+            <div class="radio-group">
+                <input class="radio" type="radio" name="radio" id="radio2">
+                <label for="radio2">Function-TEXT</label>
+                <div id="in_order" class="in-order">
+                    <input type="checkbox" name="" id="in_order_check" value="">
+                    <label id="lbl_in_order" for="">In order</label>
+                </div>
+            </div>
+        </div>
+
+        <button>Click me to change background of this document</button>
+        <p id="result">This is result area</p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
